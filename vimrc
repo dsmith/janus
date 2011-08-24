@@ -7,7 +7,7 @@ syntax on
 set encoding=utf-8
 
 " Whitespace stuff
-set nowrap
+" set nowrap
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
