@@ -1,5 +1,6 @@
 set nocompatible
 
+set number
 set ruler
 syntax on
 
@@ -126,6 +127,9 @@ color desert
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+" bclose maping
+nmap <C-W>! <Plug>Kwbd
+
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
 
@@ -134,6 +138,17 @@ let macvim_hig_shift_movement = 1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
+
+" Makes it easy to run a shells
+" example: can do ":Node %" to run the current file
+command! -nargs=* -complete=file Shell ConqueTermSplit <args>
+command! -nargs=* -complete=file Zsh ConqueTermSplit zsh <args>
+command! -nargs=* -complete=file Node ConqueTermSplit node <args>
+command! -nargs=* -complete=file Python ConqueTermSplit python <args>
+
+" use python json to Tidy a file
+command! -range=% -nargs=* Json <line1>,<line2>!python -mjson.tool <args>
+
 
 " Show (partial) command in the status line
 set showcmd
