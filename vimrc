@@ -23,7 +23,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,lib-cov,node_modules
 
 " Status bar
 set laststatus=2
@@ -149,6 +149,8 @@ command! -nargs=* -complete=file Python ConqueTermSplit python <args>
 " use python json to Tidy a file
 command! -range=% -nargs=* Json <line1>,<line2>!python -mjson.tool <args>
 
+" Removes trailing spaces
+command TrimWhiteSpace %s/\v\s+$//
 
 " Show (partial) command in the status line
 set showcmd
@@ -157,3 +159,16 @@ set showcmd
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+if &term =~ "xterm.*"
+    let &t_ti = &t_ti . "\e[?2004h"
+    let &t_te = "\e[?2004l" . &t_te
+    function XTermPasteBegin(ret)
+        set pastetoggle=<Esc>[201~
+        set paste
+        return a:ret
+    endfunction
+    map <expr> <Esc>[200~ XTermPasteBegin("i")
+    imap <expr> <Esc>[200~ XTermPasteBegin("")
+endif
+
