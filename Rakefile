@@ -155,9 +155,9 @@ vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.g
 vim_plugin_task "syntastic",        "git://github.com/scrooloose/syntastic.git"
 vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
-vim_plugin_task "vim-bclose"        "git://github.com/cespare/vim-bclose.git"
-vim_plugin_task "ctrlp"             "git://github.com/kien/ctrlp.vim.git"
-vim_plugin_task "webapi"            "git://github.com/mattn/webapi-vim.git"
+vim_plugin_task "vim-bclose",       "git://github.com/cespare/vim-bclose.git"
+vim_plugin_task "ctrlp",            "git://github.com/kien/ctrlp.vim.git"
+vim_plugin_task "webapi",           "git://github.com/mattn/webapi-vim.git"
 
 #vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
 #  sh "gem install github-markup redcarpet"
