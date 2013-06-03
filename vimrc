@@ -35,13 +35,14 @@ set noequalalways
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
+map <C-\> :CommandT<CR>
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
 
 " CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-map <C-\> :tnext<CR>
+" map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+" map <C-\> :tnext<CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -145,7 +146,7 @@ command! -nargs=* -complete=file Shell ConqueTermSplit <args>
 command! -nargs=* -complete=file Zsh ConqueTermSplit zsh <args>
 command! -nargs=* -complete=file Node ConqueTermSplit node <args>
 command! -nargs=* -complete=file Python ConqueTermSplit python <args>
-command! -nargs=* -complete=file Python ConqueTermSplit ipython <args>
+command! -nargs=* -complete=file IPython ConqueTermSplit ipython <args>
 
 " use python json to Tidy a file
 command! -range=% -nargs=* Json <line1>,<line2>!python -mjson.tool <args>
@@ -178,5 +179,3 @@ map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
-
-
