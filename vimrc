@@ -172,3 +172,8 @@ if &term =~ "xterm.*"
     imap <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
+" Tabs and buffers baby
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+map <C-L> :tabn<CR>
+map <C-H> :tabp<CR>
