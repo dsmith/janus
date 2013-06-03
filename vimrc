@@ -145,6 +145,7 @@ command! -nargs=* -complete=file Shell ConqueTermSplit <args>
 command! -nargs=* -complete=file Zsh ConqueTermSplit zsh <args>
 command! -nargs=* -complete=file Node ConqueTermSplit node <args>
 command! -nargs=* -complete=file Python ConqueTermSplit python <args>
+command! -nargs=* -complete=file Python ConqueTermSplit ipython <args>
 
 " use python json to Tidy a file
 command! -range=% -nargs=* Json <line1>,<line2>!python -mjson.tool <args>
@@ -177,3 +178,5 @@ map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
+
+
