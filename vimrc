@@ -184,4 +184,4 @@ map <C-K> :bprev<CR>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
 
-let g:SuperTabNoCompleteAfter = [',', '\s', '\t', ';', '\n']
+let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
