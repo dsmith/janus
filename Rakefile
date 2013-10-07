@@ -158,7 +158,9 @@ vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
 vim_plugin_task "vim-bclose",       "git://github.com/cespare/vim-bclose.git"
 vim_plugin_task "ctrlp",            "git://github.com/kien/ctrlp.vim.git"
 vim_plugin_task "webapi",           "git://github.com/mattn/webapi-vim.git"
-vim_plugin_task "webapi",           "git://github.com/jnwhiteh/vim-golang.git"
+vim_plugin_task "golang",           "git://github.com/jnwhiteh/vim-golang.git"
+vim_plugin_task "gocode"            "git://github.com/Blackrush/vim-gocode.git"
+vim_plugin_task "godef"             "git://github.com/dgryski/vim-godef"
 
 #vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
 #  sh "gem install github-markup redcarpet"
