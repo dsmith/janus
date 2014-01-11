@@ -161,23 +161,25 @@ vim_plugin_task "webapi",           "git://github.com/mattn/webapi-vim.git"
 vim_plugin_task "golang",           "git://github.com/jnwhiteh/vim-golang.git"
 vim_plugin_task "gocode"            "git://github.com/Blackrush/vim-gocode.git"
 vim_plugin_task "godef"             "git://github.com/dgryski/vim-godef"
+vim_plugin_task "latex"             "git://github.com/jcf/vim-latex"
 
 #vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
 #  sh "gem install github-markup redcarpet"
 #end
 
-vim_plugin_task "command_t",        "http://s3.wincent.com/command-t/releases/command-t-1.2.1.vba" do
-  Dir.chdir "ruby/command-t" do
-    if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
-      sh "/usr/bin/ruby1.8 extconf.rb"
-    elsif File.exists?("/usr/bin/ruby") # prefer system rubies
-      sh "/usr/bin/ruby extconf.rb"
-    elsif `rvm > /dev/null 2>&1` && $?.exitstatus == 0
-      sh "rvm system ruby extconf.rb"
-    end
-    sh "make clean && make"
-  end
-end
+
+#vim_plugin_task "command_t",        "http://s3.wincent.com/command-t/releases/command-t-1.2.1.vba" do
+#  Dir.chdir "ruby/command-t" do
+#    if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
+#      sh "/usr/bin/ruby1.8 extconf.rb"
+#    elsif File.exists?("/usr/bin/ruby") # prefer system rubies
+#      sh "/usr/bin/ruby extconf.rb"
+#    elsif `rvm > /dev/null 2>&1` && $?.exitstatus == 0
+#      sh "rvm system ruby extconf.rb"
+#    end
+#    sh "make clean && make"
+#  end
+#end
 
 vim_plugin_task "janus_themes" do
   # custom version of railscasts theme
