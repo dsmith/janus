@@ -185,3 +185,10 @@ map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
 
 let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
+
+if exists("&colorcolumn")
+    set colorcolumn=80,81,82
+    hi ColorColumn ctermbg=black guibg=grey10
+endif
+
+set clipboard=unnamedplus
