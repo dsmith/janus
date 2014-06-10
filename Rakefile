@@ -223,6 +223,9 @@ vim_plugin_task "arduino","git://github.com/vim-scripts/Arduino-syntax-file.git"
     file << "au BufNewFile,BufRead *.pde             setf arduino"
   end
 end
+vim_plugin_task "vwilight" do
+  sh "curl https://raw.github.com/gist/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087 > colors/vwilight.vim"
+end
 
 if File.exists?(janus = File.expand_path("~/.janus.rake"))
   puts "Loading your custom rake file"
