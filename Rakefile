@@ -212,12 +212,7 @@ end
 vim_plugin_task "molokai" do
   sh "curl https://raw.github.com/mrtazz/molokai.vim/master/colors/molokai.vim > colors/molokai.vim"
 end
-vim_plugin_task "mustache" do
-  sh "curl https://raw.github.com/defunkt/mustache/master/contrib/mustache.vim > syntax/mustache.vim"
-  File.open(File.expand_path('../ftdetect/mustache.vim', __FILE__), 'w') do |file|
-    file << "au BufNewFile,BufRead *.mustache        setf mustache"
-  end
-end
+
 if File.exists?(janus = File.expand_path("~/.janus.rake"))
   puts "Loading your custom rake file"
   import(janus)
