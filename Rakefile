@@ -218,12 +218,6 @@ vim_plugin_task "mustache" do
     file << "au BufNewFile,BufRead *.mustache        setf mustache"
   end
 end
-vim_plugin_task "arduino","git://github.com/vim-scripts/Arduino-syntax-file.git" do
-  File.open(File.expand_path('../ftdetect/arduino.vim', __FILE__), 'w') do |file|
-    file << "au BufNewFile,BufRead *.pde             setf arduino"
-  end
-end
-
 if File.exists?(janus = File.expand_path("~/.janus.rake"))
   puts "Loading your custom rake file"
   import(janus)
