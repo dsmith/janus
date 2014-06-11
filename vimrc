@@ -125,6 +125,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
+set t_Co=256
 color desert
 
 " Directories for swp files
