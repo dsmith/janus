@@ -230,4 +230,7 @@
 	url = https://github.com/bronson/vim-trailing-whitespace.git
 [submodule "janus/vim/langs/json"]
 	path = janus/vim/langs/json
-	url = https://github.com/elzr/vim-json.git
+  url = https://github.com/elzr/vim-json.git
+[submodule "janus/vim/toosl/command-t"]
+  path = janus/vim/tools/command-t
+  url = https://github.com/wincent/Command-T
