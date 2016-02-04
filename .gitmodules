@@ -234,6 +234,6 @@
 [submodule "janus/vim/tools/command-t"]
   path = janus/vim/tools/command-t
   url = https://github.com/wincent/Command-T
-[submodule "janus/vim/tools/jedi"]
+[submodule "jedi"]
 	path = janus/vim/tools/jedi
-  url = https://github.com/davidhalter/jedi-vim.git
+	url = https://github.com/davidhalter/jedi-vim.git

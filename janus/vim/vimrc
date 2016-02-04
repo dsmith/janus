@@ -36,3 +36,7 @@ exe 'source ' . g:janus_vim_path . '/core/plugins.vim'
 call janus#load_pathogen()
 
 " .vimrc.after is loaded after the plugins have loaded
+
+let g:fugitive_github_domains = ['https://github.com.com', 'https://slack-github.com']
+
+let g:go_fmt_autosave = 0
